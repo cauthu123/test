@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Giao Diện</title>
+</head>
+<body>
+    <h1>Xin chào, {{ user.username }}!</h1>
+    <p>Trang Giao Diện</p>
+    <form method="POST" action="{{ url_for('interface') }}">
+        <label for="full_name">Họ và Tên:</label>
+        <input type="text" id="full_name" name="full_name" required>
+        <br>
+        <label for="phone_number">Số Điện Thoại:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        <br>
+        <label for="image_url">URL Hình Ảnh:</label>
+        <input type="text" id="image_url" name="image_url" required>
+        <br>
+        <button type="submit">Lưu Thông Tin</button>
+    </form>
+    <hr>
+    <h2>Chia Sẻ Liên Kết</h2>
+    <p>Đây là nơi bạn có thể chia sẻ liên kết:</p>
+    <form method="POST" action="{{ url_for('share_link') }}">
+        <label for="link">Liên Kết:</label>
+        <input type="text" id="link" name="link" required>
+        <br>
+        <button type="submit">Chia Sẻ</button>
+    </form>
+    <p><a href="{{ url_for('logout') }}">Đăng Xuất</a></p>
+</body>
+</html>
