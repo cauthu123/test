@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý thành viên</title>
+    <title>User2</title>
     <!-- Bao gồm tệp CSS của Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 
 </head>
 <style>
@@ -15,7 +15,7 @@
     }
     body{
         /*background-color: #837c82;  /*Bật cái background này nếu ko muốn thêm hình ảnh làm nền (xóa dấu /* ở đầu đi)*/
-        background: url("./static/img/avt.jpg"); /*Ko dùng hình ảnh làm nền thì thêm (/* ở đầu)*/
+        background: url("../static/img/avt.jpg"); /*Ko dùng hình ảnh làm nền thì thêm (/* ở đầu)*/
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-attachment: fixed;
@@ -24,7 +24,9 @@
         text-align: center;
         font-size: xx-large;
         font-weight: bold;
-        color: rgb(0, 0, 0); /* Màu của tên nhóm */
+        color: rgb(0, 0, 0); /* Màu của Tên */
+        /*Thay đổi kiểu chữ thì dùng 
+        font-family: ctrl + space để chọn font; */
     }
     #text{
         color: black; /*Màu mô tả*/
@@ -36,24 +38,22 @@
     }
     /*Nút Instagram*/
     #btn-ig{
-        background-color: white;   /*Màu nền của nút*/     
-        color: black;     /*Màu chữ trong nút*/
-        border: 1px solid black;
+        background: linear-gradient(45deg, #f705a6, rgb(189, 37, 37), #d36709);
+        color: white; /*Màu chữ trong nút*/
+        border: none; 
         border-radius: 10px;
     }
-    /*Nút Zalo*/
+    /*Nút zalo*/
     #btn-zalo{
-        background-color: white;   /*Màu nền của nút*/     
-        color: black;     /*Màu chữ trong nút*/
-        border: 1px solid black;
+        background: linear-gradient(45deg, #0586f7, #ffffff);
+        color: white; /*Màu chữ trong nút*/
+        border: none; 
         border-radius: 10px;
     }
     /*Nút fb, yt, sdt*/
     #btn-fb, #btn-yt, #btn-sdt{
         border-radius: 10px;
-        background-color: white;   /*Màu nền của nút*/     
-        color: black;     /*Màu chữ trong nút*/    
-        border: 1px solid black;
+        color: white; /*Màu chữ trong nút*/
     }
     a{
         margin-top: 10px;
@@ -68,26 +68,28 @@
             <div class="">
                 <header>
                     <!-- Đưa đường dẫn ảnh đại diện vào trong dấu ngoặc kép của src  -->
-                    <img id="anh" src="./static/img/avt.jpg" class="card-img-top" alt="Ảnh đại diện">
+                    <img id="anh" src="../static/img/logo.jpg" class="card-img-top" alt="Ảnh đại diện của bạn">
                 </header>
                 <div class="card-body">
-                    <h5 class="card-title">Tên nhóm</h5> <!--Chỗ ghi tên nhóm-->
-                    <p class="card-text" id="text">Mô tả Nhóm:</p>
-                    <p id="text">Viết mô tả về nhóm ở đây.</p> <!--Có thể viết gì trong đây hoặc xóa-->
+                    <h5 class="card-title">Thạnh</h5> <!--Chỗ ghi họ và tên-->
+                    <p class="card-text" id="text">Mô tả bản thân:</p>
+                    <p id="text">Bạn có thể viết mô tả về bản thân ở đây.</p> <!--Có thể viết gì trong đây hoặc xóa-->
+                    <p id="text" style="text-align: center; font-weight: bold; font-size: x-large;">Liên hệ</p>
                     <center>
-                        <a href="./user/loc.html" class="btn btn-success mr-2" id="btn-fb">Lộc</a> <br>
-                        <a href="./user/hung.html" class="btn btn-success mr-2" id="btn-zalo">Hùng</a> <br>
-                        <a href="./user/quy.html" class="btn btn-success" id="btn-ig">Quý</a> <br>
-                        <a href="./user/thanh.html" class="btn btn-success" id="btn-yt">Thạnh</a>
-                        <a href="./user/thinh.html" class="btn btn-success" id="btn-sdt">Thịnh</a>
+                        <!-- Thay thế dấu # bằng đường link truy cập -->
+                        <a href="#" class="btn btn-primary mr-2" id="btn-fb">Facebook</a> <br>
+                        <a href="#" class="btn btn-success mr-2" id="btn-zalo">Zalo</a> <br>
+                        <a href="#" class="btn" id="btn-ig">Instagram</a> <br>
+                        <a href="#" class="btn btn-danger" id="btn-yt">Youtube</a>
+                        <a href="tel:#" class="btn btn-success" id="btn-sdt">Số điện thoại</a>
                     </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="./static/js/particles.js"></script>
-<script src="./static/js/app.js"></script>
+<script src="../static/js/particles.js"></script>
+<script src="../static/js/app.js"></script>
 <!-- Bao gồm các tệp JavaScript của Bootstrap và jQuery (tùy chọn) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
